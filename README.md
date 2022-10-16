@@ -1,2 +1,2 @@
 # AKAI-rekrutacja
-Wykonane zadanie upiększania formularza(html-css-js)
+Wykonane zadanie upiększania formularza (html-css-js).
