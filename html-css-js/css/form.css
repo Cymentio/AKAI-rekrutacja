@@ -1,0 +1,259 @@
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    AKAI Frontend Task - CSS
+
+    Spróbuj zmodyfikować poniższy plik ze stylami tak, by upiększyć formularz na stronie.
+    Jako inspiracji możesz skorzystać z szablonu znajdującego się w pliku img/layout.png
+    Nie wymagamy, by wykonać identyczny layout. Liczy się kreatywność.
+
+    Przy wykonywaniu zadania można zmienić strukturę pliku index.html.
+    Pamiętaj, że w takim wypadku będzie trzeba zadbać o dostosowanie odpowiednich selektorów.
+
+    Jeśli korzystasz z preprocessorów takich jak Sass/Less, również możesz się tym pochwalić.
+
+    Powodzenia!
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
+
+/*
+Przeanalizuj składnię pliku .css.
+Przy stylowaniu na najpierw podajemy, co chcemy ostylować, a następnie jakie atrybuty chcemy zmienić.
+np. poniższy selektor (body) oznacza, że modyfikujemy kontent body w dokumencie html.
+Żeby mieć pewność o czym mowa, zajrzyj w plik index.html, i znajdź tag <body>.
+*/
+body {
+    /*
+  wszystko co znajduje się pomiędzy nawiasami klamrowymi, to nasze polecenia modyfikujące określony element dokumentu
+  Poniżej zmieniamy atrybut font-family, który jest odpowiedzialny za wyświetlaną na stronie czcionkę
+  Zastanów się, czy Comic Sans jest odpowiedni.
+  Jeśli nie, wybierz inną czcionkę i zmodyfikuj poniższy tekst.
+  */
+    font-family: "Arial", "Arial", sans-serif;
+    background: radial-gradient(80% 60%, Azure, DeepSkyBlue);
+}
+
+/*
+selektor gwiazdki oznacza, że odnosimy się do konkretnego 'id' w pliku html.
+w tym przypadku odnosimy się do id "task-frontend".
+Zobacz, co się kryje pod tym id w pliku index.html.
+*/
+
+#task-frontend {
+    /*
+  pomiędzy nawiasami klamrowymi ponownie możemy modyfikować atrybuty wybranego elementu.
+  Opiszę krótko, co dzieje się w poniższym przykładzie:
+  */
+    /*
+  border modyfikuje obramowanie elementu. Obramowanie zawiera w sobie trzy atrybuty: grubość, styl i kolor.
+  Można się do nich odnosić indywidualnie, albo do wszystkich na raz, tak jak jest to zrobione poniżej.
+  Spróbuj dostosować obramowanie tak, żeby lepiej się prezentowało. Oczywiście, jeśli uważasz, że obramowanie nie jest potrzebne,
+  możesz zrezygnować z modyfikacji tego atrybutu. Domyślnie elementy nie posiadają obramowania, więc wystarczy usunąć poniższą linię.
+  */
+    border: 7px outset MediumSlateBlue;
+    border-radius: 16px;
+    /*
+  max-width ustawia maksymalną szerokość dla wybranego elementu. Oznacza to, że element osiągnie co najwyżej taką szerokość.
+  Natomiast jeśli nie będzie to możliwe (okno będzie mniejsze), to element skurczy się wraz z tym oknem.
+  */
+    max-width: 660px;
+    /*
+  atrybut margin definiuje miejsce wolne poza obramowaniem elementu.
+  margin jest jednym ze składowych bardzo ważnego pojęcia w CSS, które nazywamy Box Model.
+  Zachęcam do poczytania więcej na ten temat, np. pod adresem:
+  https://www.w3schools.com/css/css_boxmodel.asp
+
+  W poniższym przypadku ustawiamy wartość margin na górze i dole równą 0, zaś po bokach 'auto' - co oznacza,
+  że wartości po lewej i prawej będą obliczone przez przeglądarkę podczas renderowania strony, tak, aby margin-left i margin-right
+  otrzymały taką samą wartość, co będzie skutowało tym, że element zostanie na stronie wycentrowany.
+  */
+
+    margin: 140px auto;
+    /*
+  atrybut text-align definiuje horyzontalne umieszczenie (wyrównanie) tekstu.
+  Wartość center oznacza, że chcemy umieścić tekst na środku.
+  */
+    text-align: center;
+    /*
+  background-color definiuje kolor tła w elemencie.
+  CSS zawiera prefediniowane wartości takie jak white, red, black, etc, ale można również tworzyć własne
+  poprzez podanie odpowiedniej wartości rgba
+  */
+    background-color: Lavender;
+    /*
+  zamykająca klamra oznacza, że kończymy modyfikować atrybuty danego elementu
+  */
+
+    
+}
+
+
+/*
+jeśli widzisz dwa elementy (A, B) oddzielone spacją, oznacza to, że modyfikujemy wszystkie elementy B, które zawierają się w A.
+W poniższym przypadku modyfikujemy wszystkie elementy z klasą "basic-title", które znajdują się w elemencie o id "task-frontend".
+*/
+#task-frontend .basic-title {
+  /*
+  atrybut 'color' definiuje kolor tekstu w elemencie.
+  Zastanów się, czy kolor czerwony jest odpowiedni.
+  Jeśli nie, zmodyfikuj poniższy tekst wedle własnego uznania.
+  */
+  color: darkorange;
+}
+
+/*
+podobna sytuacja występuje poniżej. Wybieramy wszystkie elementy z klasą 'form-line' znajdujące się w elemencie o id 'task-frontend'.
+*/
+    #task-frontend .form-line {
+        border: 0.5px solid DarkOrchid;
+    }
+
+
+/*
+znasz już sposób definiowania selektorów.
+Oczywiście nie przerobiliśmy jeszcze wszystkich. W związku z tym zachęcam Cię do zapoznania się z innymi selektorami, np. tutaj:
+https://www.w3schools.com/cssref/css_selectors.asp
+Chciałbym, byś przeanalizowała / przeanalizował poniższe style i zmodyfikować je według własnego uznania.
+*/
+
+    #task-frontend form > label {
+        display:block;
+        text-transform: uppercase;
+        margin: 0 auto;
+    }
+    #task-frontend form > label.bad {
+        color:red;
+        font-size:12px;
+        text-transform: none;
+        visibility:hidden;
+    }
+
+    #task-frontend input[type="text"], #task-frontend input[type="email"] {
+        display: block;
+        margin: 10px auto;
+        border: 1px solid white;
+        border-radius: 16px;
+        box-shadow: 0 0 15px 4px MediumPurple;
+        background-color: MintCream;
+        width: 250px;
+        height: 30px;
+        padding: 2px 12px;
+    }
+
+#task-frontend span {
+  display: block;
+}
+
+    #task-frontend input[type="checkbox"] {
+        
+        text-transform: none;
+        cursor: pointer;
+    }
+
+#task-frontend table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#task-frontend .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#task-frontend .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+.checkmark {
+    display: inline;
+    border: 1px solid CornflowerBlue;
+    border-radius: 2px;
+    position: absolute;
+    top: 1px;
+    left: 12px;
+    height: 12px;
+    width: 12px;
+    background-color: white;
+}
+
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    top: -1px;
+    left: 3px;
+    width: 3px;
+    height: 7px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#task-frontend .text-line{
+    display:block;
+}
+
+
+#task-frontend input[type="submit"] {
+    color: Indigo;
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+    background-color: orange;
+    border-radius: 9px;
+}
+
+
+    #task-frontend input[type="submit"]:hover {
+        background-color: Gold
+    }
+
+#task-frontend #relative1 {
+    display: inline;
+    position: relative;
+    top: -42px;
+    left: 290px;
+    visibility: hidden;
+    color:red ;
+}
+#task-frontend #relative2 {
+    display: inline;
+    position: relative;
+    top: -105px;
+    left: 100px;
+    visibility: hidden;
+    color: red;
+}
+
+#task-frontend #valid {
+    position: relative;
+    top: -12px;
+    visibility: hidden;
+    color: DarkSeaGreen;
+}
