@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background: rgb(48, 48, 48);
+}
+
+
+
+h1 {
+    margin-bottom: 16px;
+    text-align: center;
+    color:rgb(59, 47, 135);
+    font-size:36px;
+}
+
+main {
+  width: 100%;
+  max-width: 690px;
+  margin: auto;
+  border:8px outset black;
+  background:rgb(20, 19, 19);
+}
+
+form {
+    background: rgb(214, 147, 16);
+    max-width: 690px;
+    margin: 0 auto;
+    text-align:center;
+    border:2px solid rgb(248, 175, 175);
+}
+
+label {
+  padding: 8px;
+}
+
+label span {
+  display: inline-block;
+  padding-left: 8px;
+}
+
+#pokemon-name{
+    border: 2px solid rgb(59, 47, 135);
+    background-color:rgb(159, 220, 251)
+}
+
+form > label {
+    display: inline-block;
+    font-family: 'Franklin Gothic';
+    position: relative;
+    cursor: pointer;
+}
+
+form > label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+form > label:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+form > label input:checked ~ .checkmark {
+    background-color: rgb(177, 10, 10);
+}
+
+form > label input:checked ~ .checkmark:after {
+    display: inline-block;
+}
+
+
+
+form > label .checkmark {
+        position: absolute;
+        top: 12px;
+        left: 0;
+        height: 12px;
+        width: 12px;
+        background-color: #eee;
+        border:1px solid black;
+}
+
+form > label .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+form > label .checkmark:after {
+    left: 3px;
+    top: 0;
+    width: 1px;
+    height: 5px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.pokemons {
+    max-width: 690px;
+    text-align: center;
+    margin: 0 auto;
+    background: url(bgr1.jpg) no-repeat center center fixed;
+    background-size: 700px 800px;
+}
+
+.pokemons div{
+    width:200px;
+    display: inline-block;
+    height:170px;
+    border:4px inset black;
+    border-radius:4px;
+    margin: 10px 10px;
+    font:bold 16px arial, verdana;
+    background: rgb(0, 0, 0, 0.4)
+
+}
+
+.pokemons figcaption {
+    padding:0;
+    text-align:center;
+
+}
+
+
+.pokemons .grass{
+    border-color:green;
+}
+
+.pokemons .poison{
+    border-color:blueviolet;
+}
+
+.pokemons .fire{
+    border-color:red;
+}
+
+.pokemons .flying{
+    border-color:cornflowerblue;
+}
+
+.pokemons .bug{
+    border-color:greenyellow;
+}
+
+.pokemons .water{
+    border-color:blue;
+}
+
+.pokemons .normal{
+    border-color:snow;
+}
+
+.pokemons .ground{
+    border-color:saddlebrown;
+}
+
+.pokemons .electric{
+    border-color:yellow;
+}
+
+.pokemons .fairy{
+    border-color:hotpink;
+}
+
+.pokemons .fighting{
+    border-color:rosybrown;
+}
+
+.pokemons .psychic{
+    border-color:darkviolet;
+}
+
+.pokemons .rock{
+    border-color:gray;
+}
+
+.pokemons .steal{
+    border-color:silver;
+}
+
+.pokemons .ice{
+    border-color:cornflowerblue;
+}
+
+.pokemons .ghost{
+    border-color:rgb(47, 29, 68);
+}
+
+.pokemons .dragon{
+    border-color:slateblue;
+}
+
+input {
+  padding: 4px;
+}
+
+button {
+  padding: 4px;
+}
