@@ -51,7 +51,7 @@ function typechecked(types) {
 }
 
 function namechecked(name) {
-    if (name.toLowerCase().includes(document.getElementById("pokemon-name").value) || name.toUpperCase().includes(document.getElementById("pokemon-name").value)) return true;
+    if (name.toLowerCase().includes(document.getElementById("pokemon-name").value.toLowerCase())) return true;
     return false;
 }
 
